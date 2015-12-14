@@ -3,18 +3,8 @@ package org.tempestdesign.sendclient;
 //import java.io.IOException;
 import java.util.Date;
 import java.util.Properties;
-
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-
-//import javax.mail.*;
-//import javax.mail.internet.*;
+import javax.mail.*;
+import javax.mail.internet.*;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.collections.*;
@@ -242,10 +232,7 @@ public class Client extends Application  /*implements EventHandler<ActionEvent>*
 			m.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
 			m.setSubject(sub);
 			m.setSentDate(new Date());
-			if(cTYPE.equals("text/plain"))
-				m.setContent(cont, "text/plain");
-			else if(cTYPE.equals("text/html"));
-				m.setContent(cont, "text/html");
+			m.setContent(cont, cTYPE);
 			m.setHeader("EMAIL HEAD", mhead);
 			System.out.println("\n \n \n \n >> ??????? " + m.getContentType());
 			System.out.println("\n \n \n \n >> ??????? " + m.getDataHandler());
