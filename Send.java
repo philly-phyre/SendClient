@@ -54,7 +54,7 @@ public class Send {
 		
 	}
 
-	public static boolean auth(String UN, String PW) /*throws AddressException*/ {
+	public static boolean auth(String UN, String PW) /*throws AuthenticationFailedException /*AddressException*/ {
 		
 		prop.put("mail.smtp.auth", "true");
 		if(host.equals("smtp.gmail.com") || host.equals("smtp.mail.yahoo.com")){
