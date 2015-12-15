@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.Properties;
 import javax.mail.*;
 import javax.mail.internet.*;
+//import com.sun.javafx.css.StyleManager;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.collections.*;
@@ -47,6 +48,9 @@ public class Client extends Application  /*implements EventHandler<ActionEvent>*
 	//@SuppressWarnings("unused")
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		/*Application.setUserAgentStylesheet(null);
+		StyleManager.getInstance().addUserAgentStylesheet("");*/
+		
 		win = primaryStage;
 		
 		win.setOnCloseRequest(e -> Platform.exit());
